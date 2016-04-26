@@ -1,0 +1,12 @@
+<Project MSBuildVersion="4.0" ToolsVersion="4.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--UsingTask TaskName="TransformXml" AssemblyFile="Microsoft.Web.Publishing.Tasks.dll"/-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v11.0\Web\Microsoft.Web.Publishing.targets" />
+
+	<Target Name="Default">
+		<TransformXml
+			Source="$(SourceFile)"
+			Transform="$(TransformFile)"
+			Destination="$(DestinationFile)"
+		/>
+	</Target>
+</Project>
